@@ -37,10 +37,12 @@ export const Question = ({questionIndex, onSelectAnswer, onSkipAnswer}) => {
   
     return (
     <div id="question">
-        <QuestionTimer
+                      
+            <QuestionTimer
                timeout={10000} 
                onTimeout={onSkipAnswer}               
-            />
+            />              
+            
             <h2>{QUESTIONS[questionIndex].text}</h2>
              <Answers
                 answers={QUESTIONS[questionIndex].answers} 
